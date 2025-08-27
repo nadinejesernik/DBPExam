@@ -74,7 +74,6 @@ public class DBHelper {
     // ------------------------------------------------------------
 
     // INSERT: Neues Spiel hinzufügen
-    // INSERT: Neues Spiel hinzufügen (mit Erfolgsmeldung)
     public int insertNeuesSpiel(Spiel spiel) {
         String sql = "INSERT INTO Spiele (Titel, Genre, Preis) VALUES (?, ?, ?)";
         try (PreparedStatement ps = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
@@ -202,7 +201,6 @@ public class DBHelper {
         return 0;
     }
 
-    // Kunde mit den meisten Käufen
     // Liefert den Kunden mit dem höchsten Umsatz (Summe der Preise seiner Käufe)
     public TopKundeUmsatz getKundeMitHoechstemUmsatz() {
         String sql = """
