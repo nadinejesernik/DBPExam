@@ -168,7 +168,7 @@ public class DBHelper {
     }
 
     // Mehrere Spiele auf einmal einfügen
-    // Mehrere Spiele auf einmal einfügen (mit Sammelausgabe)
+
     public void insertSpiele(ArrayList<Spiel> spiele) {
         int erfolge = 0;
         int fehler = 0;
